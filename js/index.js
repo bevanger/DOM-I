@@ -51,6 +51,16 @@ navBar.forEach((item) => {
   item.style.color = "green"
 });
 
+const navLink = document.createElement('a')
+navLink.textContent = "random";
+navLink.href = '#';
+document.querySelector('nav').appendChild(navLink);
+
+const navLink2 = document.createElement('a')
+navLink2.textContent = "text";
+navLink2.href = '#';
+document.querySelector('nav').appendChild(navLink2);
+
 const ctaH1 = document.querySelector("section div h1")
 ctaH1.textContent = siteContent.cta.h1;
 
