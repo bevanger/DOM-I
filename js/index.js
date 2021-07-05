@@ -45,6 +45,9 @@ const navBar =  document.querySelectorAll('header nav a')
 navBar.forEach((link, index) => {
   link.textContent = siteContent.nav[`nav-item-${index+1}`]
 });
+navBar.forEach((item) => {
+  item.style.color = "green"
+});
 
 const ctaH1 = document.querySelector("section div h1")
 ctaH1.textContent = siteContent.cta.h1;
@@ -75,3 +78,14 @@ bottomContent[2].textContent = siteContent ["main-content"]["vision-content"];
 
 const middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const contactH4 = document.querySelector(".contact h4")
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+const contactMain = document.querySelectorAll(".contact p")
+contactMain[0].textContent = siteContent["contact"]["address"];
+contactMain[1].textContent = siteContent["contact"]["phone"];
+contactMain[2].textContent = siteContent["contact"]["email"];
+
+const footerMain = document.querySelector("footer")
+footerMain.textContent = siteContent["footer"]["copyright"]
