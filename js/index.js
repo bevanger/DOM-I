@@ -40,5 +40,38 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-let nav = document.querySelector("Services")
-logo.setAttribute('Services')
+
+const navBar =  document.querySelectorAll('header nav a')
+navBar.forEach((link, index) => {
+  link.textContent = siteContent.nav[`nav-item-${index+1}`]
+});
+
+const ctaH1 = document.querySelector("section div h1")
+ctaH1.textContent = siteContent.cta.h1;
+
+const ctaButton = document.querySelector("section div button")
+ctaButton.textContent = siteContent.cta.button;
+
+const ctaImgSrc = document.getElementById("cta-img")
+ctaImgSrc.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const topContentH4 = document.querySelectorAll(".top-content h4")
+topContentH4[0].textContent = siteContent ["main-content"]["features-h4"];
+topContentH4[1].textContent = siteContent ["main-content"]["about-h4"];
+
+const bottomContentH4 = document.querySelectorAll(".bottom-content h4")
+bottomContentH4[0].textContent = siteContent ["main-content"]["services-h4"];
+bottomContentH4[1].textContent = siteContent ["main-content"]["product-h4"];
+bottomContentH4[2].textContent = siteContent ["main-content"]["vision-h4"];
+
+const topContent = document.querySelectorAll(".top-content p")
+topContent[0].textContent = siteContent ["main-content"]["features-content"];
+topContent[1].textContent = siteContent ["main-content"]["about-content"];
+
+const bottomContent = document.querySelectorAll(".bottom-content p")
+bottomContent[0].textContent = siteContent ["main-content"]["services-content"];
+bottomContent[1].textContent = siteContent ["main-content"]["product-content"];
+bottomContent[2].textContent = siteContent ["main-content"]["vision-content"];
+
+const middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
